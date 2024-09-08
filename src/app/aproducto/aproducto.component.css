@@ -1,0 +1,45 @@
+:host {
+    display: block;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.posicion {
+    position: relative;
+    top: -90px;
+    left: 50px;
+
+}
+
+.color {
+    position: relative;
+    background-color:  #667bd8 ; 
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card-header {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    color: white; 
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004080;
+}
+
+
+

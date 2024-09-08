@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="posicion">
+    <div class="card shadow-sm border-light">
+      <div class="color">
+        <h3>Registro de Producto</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #registroForm="ngForm">
+          <div class="form-group">
+            <label for="nombre">Nombre Producto:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="producto.nombre" placeholder="Ingrese el nombre del producto" required>
+          </div>
+
+          <div class="form-group">
+            <label for="descripcionproducto">Descripción Producto:</label>
+            <input type="text" class="form-control" id="descripcionproducto" name="descripcionproducto" [(ngModel)]="producto.descripcion" placeholder="Ingrese la descripción del producto" required>
+          </div>
+
+          <div class="form-group">
+            <label for="precioprod">Precio Producto (en pesos):</label>
+            <input type="text" class="form-control" id="precioprod" name="precioprod" [(ngModel)]="producto.precio" placeholder="Ingrese el precio del producto" pattern="^\$?[0-9]+(\.[0-9]{1,2})?$" required>
+            <small class="form-text text-muted">Solo se permiten números. Ejemplo: $1000 o 1000</small>
+          </div>
+
+          <div class="form-group">
+            <label for="tipo">Tipo:</label>
+            <select class="form-control" id="tipo" name="tipo" [(ngModel)]="producto.tipo" required>
+              <option value="" disabled selected>Seleccione un tipo</option>
+              <option value="herramientasH">Herramienta de limpieza</option>
+              <option value="jardinería">	Accesorio de jardinería</option>
+              <option value="papeleria">Papelería</option>
+            </select>
+          </div>
+
+          <button type="submit" class="color btn-lg btn-block">Registrar Producto</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
